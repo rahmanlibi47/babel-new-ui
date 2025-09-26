@@ -1,4 +1,5 @@
 .btn-modes {
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -6,8 +7,12 @@
   left: 20px;
   padding: 8px 12px;
   width: 260px;
-  border: 1px solid var(--colors-gray-100);
+  background: #ffffff;
+  border: 1px solid #f5f5f5;
   border-radius: 12px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  background-color: #ffffff !important;
 
   .circle-plus {
     display: inline-flex;
@@ -81,12 +86,19 @@
 
 .library-bar {
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
   padding: 24px 16px;
   position: relative;
-  border-top: 1px solid #e3e3e3;
+
+  width: 280px;
+  height: 512px;
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 1;
 
   // First Row Container
   .library-bar-div {
@@ -101,12 +113,12 @@
     .text-wrapper {
       flex: 1;
       color: #090b0f;
-      font-family: var(--text-md-medium-font-family);
-      font-size: var(--text-md-medium-font-size);
-      font-style: var(--text-md-medium-font-style);
-      font-weight: var(--text-md-medium-font-weight);
-      letter-spacing: var(--text-md-medium-letter-spacing);
-      line-height: var(--text-md-medium-line-height);
+      font-family: "Uncut Sans Variable", Helvetica !important;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #0a0c10;
       margin-top: -1px;
       position: relative;
     }
@@ -135,6 +147,7 @@
       flex: 0 0 auto !important;
       top: unset !important;
       left: unset !important;
+      font-family: "Uncut Sans Variable", Helvetica !important;
     }
   }
 }
@@ -160,7 +173,7 @@
       width: 24px;
       height: 24px;
       border-radius: 24px;
-      background-image: url(./profile.svg);
+      background-image: url(./profile.jpg);
       background-position: center;
       background-size: cover;
       position: relative;

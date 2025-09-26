@@ -9,7 +9,7 @@ export const LibraryBar = () => {
       {" "}
       <div className="library-bar-div">
         {" "}
-        <div className="text-wrapper">Library</div>{" "}
+        <div className="text-wrapper"><h3>Library</h3></div>{" "}
         <Icon className="" icon={<ChevronRight />} />{" "}
       </div>{" "}
       <div className="library-bar-div-2">

@@ -21,15 +21,16 @@ export default function Navbar({
       <div className={styles.brand}>
         <div className={styles.sidebarTrigger}>
           <button className={styles.iconBtn} aria-label="layout">
-            <Icon
+            <Icon  className={styles.ghost}
               icon={<LayoutDefault />}
               hoverIcon={<LayoutHover />}
-              size={20}
+              size={18}
             />
           </button>
-
+          {/* sidebar */}
           <aside className={styles.sidebar} aria-hidden="true">
             <div className={styles.sidebarInner}>
+              {/* Sidebar Header */}
               <div className={styles.sidebarHeader}>
                 <div className={styles.brandMini}>
                   <span>babel</span>
@@ -40,25 +41,33 @@ export default function Navbar({
                 </div>
               </div>
 
-              <BtnModes
-                Svg={Ask}
-                property1="default"
-                className=""
-                text={"Ask Insights"}
-                brief={"For open-ended questions"}
-              />
-              <BtnModes
-                Svg={Browse}
-                property1="default"
-                className=""
-                text={"Topics"}
-                brief={"For structured research"}
-              />
+              <div className={styles.sidebarBody}>
+                <div>
+                  <BtnModes
+                    Svg={Ask}
+                    property1="default"
+                    className=""
+                    text={"Ask Insights"}
+                    brief={"For open-ended questions"}
+                  />
+                  <BtnModes
+                    Svg={Browse}
+                    property1="default"
+                    className=""
+                    text={"Topics"}
+                    brief={"For structured research"}
+                  />
+                </div>
 
-              <div className={styles.sidebarLibrary}>
-               <LibraryBar />
+                <div className={styles.sidebarLibrary}>
+                  <LibraryBar />
+                </div>
               </div>
-              <LoggedUser />
+
+              {/* Sidebar Footer */}
+              <div className={styles.sidebarFooter}>
+                <LoggedUser />
+              </div>
             </div>
           </aside>
         </div>
@@ -75,7 +84,7 @@ export default function Navbar({
 
       <nav className={styles.navItems}>
         <button className={styles.ghost}>Share</button>
-        <Icon icon={<MenuMore />} size={18} />
+        <Icon className={styles.ghost} icon={<MenuMore />} size={18} />
       </nav>
     </header>
   );
